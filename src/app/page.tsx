@@ -1,69 +1,473 @@
+"use client";
+
 import Image from "next/image";
 
 export default function Home() {
+  const whatsappNumber = "919360667064";
+  const email = "aldrinjoshua47@gmail.com";
+  const linkedin =
+    "https://www.linkedin.com/in/v-a-aldrin-joshua-73216a412";
+  const github = "https://github.com/Aldrinjoshua04";
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
+    <main className="min-h-screen bg-[#09090b] text-white selection:bg-blue-500/30">
+      {/* NAVBAR */}
+      <nav className="sticky top-0 z-50 border-b border-white/10 bg-[#09090b]/90 backdrop-blur-xl">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6">
           <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href="#home"
+            className="text-2xl font-bold tracking-tight transition hover:opacity-80"
+          >
+            ALDRIN<span className="text-blue-400">.</span>
+          </a>
+
+          <div className="hidden items-center gap-10 text-sm text-zinc-400 md:flex">
+            <a href="#about" className="transition hover:text-white">
+              About
+            </a>
+
+            <a href="#projects" className="transition hover:text-white">
+              Projects
+            </a>
+
+            <a href="#skills" className="transition hover:text-white">
+              Skills
+            </a>
+
+            <a href="#contact" className="transition hover:text-white">
+              Contact
+            </a>
+          </div>
+
+          <a
+            href={github}
             target="_blank"
             rel="noopener noreferrer"
+            className="rounded-xl border border-white/15 px-5 py-3 text-sm font-medium transition hover:border-blue-400 hover:bg-blue-400/10"
           >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
+            GitHub ↗
+          </a>
+        </div>
+      </nav>
+
+      {/* HERO */}
+      <section
+        id="home"
+        className="relative overflow-hidden border-b border-white/10"
+      >
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_30%,rgba(59,130,246,0.12),transparent_35%)]" />
+
+        <div className="relative mx-auto grid min-h-[760px] max-w-7xl items-center gap-16 px-6 py-24 lg:grid-cols-[1.2fr_0.8fr]">
+          {/* LEFT */}
+          <div>
+            <div className="mb-10 flex items-center gap-3 text-sm text-zinc-400">
+              <span className="h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[0_0_20px_rgba(52,211,153,0.8)]" />
+              Available for opportunities
+            </div>
+
+            <p className="mb-6 text-sm font-medium tracking-[0.35em] text-blue-400">
+              CLOUD · DEVOPS · PLATFORM ENGINEERING
+            </p>
+
+            <h1 className="max-w-4xl text-6xl font-bold leading-[0.95] tracking-tight sm:text-7xl lg:text-8xl">
+              I build systems that
+              <span className="block bg-gradient-to-r from-zinc-500 to-zinc-300 bg-clip-text text-transparent">
+                scale beyond the screen.
+              </span>
+            </h1>
+
+            <p className="mt-10 max-w-2xl text-lg leading-9 text-zinc-400 sm:text-xl">
+              I&apos;m Aldrin Joshua, an aspiring Cloud & DevOps Engineer
+              focused on cloud infrastructure, automation, containerized
+              systems, distributed platforms, and building reliable
+              production-oriented software.
+            </p>
+
+            <div className="mt-12 flex flex-wrap gap-5">
+              <a
+                href="#projects"
+                className="rounded-xl bg-white px-7 py-4 font-medium text-black transition hover:scale-[1.03] hover:bg-zinc-200"
+              >
+                View My Work →
+              </a>
+
+              <a
+                href={github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-xl border border-white/15 px-7 py-4 font-medium transition hover:border-blue-400 hover:bg-blue-400/10"
+              >
+                GitHub ↗
+              </a>
+            </div>
+          </div>
+
+          {/* PROFILE CARD */}
+          <div className="relative mx-auto w-full max-w-md">
+            <div className="absolute -inset-6 rounded-[2rem] bg-blue-500/10 blur-3xl" />
+
+            <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-zinc-900/70 p-3 shadow-2xl">
+              <div className="relative aspect-[4/5] overflow-hidden rounded-[1.5rem]">
+                <Image
+                  src="/aldrin.jpg"
+                  alt="Aldrin Joshua"
+                  fill
+                  priority
+                  className="object-cover"
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+
+                <div className="absolute bottom-0 left-0 right-0 p-7">
+                  <p className="text-sm tracking-[0.25em] text-blue-300">
+                    ENGINEERING PORTFOLIO
+                  </p>
+
+                  <h2 className="mt-2 text-2xl font-bold">
+                    Aldrin Joshua
+                  </h2>
+
+                  <p className="mt-1 text-sm text-zinc-300">
+                    Cloud · DevOps · Platform Engineering
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ABOUT */}
+      <section id="about" className="border-b border-white/10">
+        <div className="mx-auto grid max-w-7xl gap-16 px-6 py-28 lg:grid-cols-[0.8fr_1.2fr]">
+          <div>
+            <p className="text-sm font-medium tracking-[0.35em] text-blue-400">
+              ABOUT ME
+            </p>
+
+            <h2 className="mt-6 text-5xl font-bold tracking-tight">
+              Building for
+              <span className="block text-zinc-500">real systems.</span>
+            </h2>
+          </div>
+
+          <div>
+            <p className="text-xl leading-9 text-zinc-300">
+              My focus is not just writing code. I&apos;m interested in
+              understanding how software moves from development into reliable,
+              scalable infrastructure.
+            </p>
+
+            <p className="mt-6 text-lg leading-8 text-zinc-500">
+              I&apos;m building hands-on experience across cloud platforms,
+              DevOps workflows, backend systems, distributed architectures,
+              automation, CI/CD, containers, and platform engineering.
+            </p>
+
+            <div className="mt-10 border-l border-blue-400 pl-6 text-zinc-400">
+              Continuously expanding through hands-on projects, cloud
+              engineering, automation, and production-oriented system design.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* PROJECTS */}
+      <section id="projects" className="border-b border-white/10">
+        <div className="mx-auto max-w-7xl px-6 py-28">
+          <div className="max-w-3xl">
+            <p className="text-sm font-medium tracking-[0.35em] text-blue-400">
+              SELECTED WORK
+            </p>
+
+            <h2 className="mt-6 text-5xl font-bold tracking-tight">
+              Engineering projects,
+              <span className="block text-zinc-500">not tutorials.</span>
+            </h2>
+          </div>
+
+          {/* AEGIS X */}
+          <div className="mt-16 overflow-hidden rounded-[2rem] border border-blue-400/20 bg-gradient-to-br from-blue-500/10 via-zinc-900 to-zinc-950">
+            <div className="grid gap-12 p-8 lg:grid-cols-[1fr_0.9fr] lg:p-14">
+              <div>
+                <div className="inline-flex rounded-full border border-blue-400/30 bg-blue-400/10 px-4 py-2 text-xs font-medium tracking-[0.2em] text-blue-300">
+                  FLAGSHIP ENGINEERING PROJECT
+                </div>
+
+                <p className="mt-8 text-sm tracking-[0.3em] text-blue-400">
+                  DISTRIBUTED SYSTEMS · DEVOPS · BACKEND ENGINEERING
+                </p>
+
+                <h3 className="mt-6 text-6xl font-bold tracking-tight">
+                  Aegis <span className="text-blue-400">X</span>
+                </h3>
+
+                <p className="mt-5 text-2xl text-zinc-400">
+                  Distributed CI & Task Orchestration Platform
+                </p>
+
+                <p className="mt-8 max-w-xl text-lg leading-9 text-zinc-400">
+                  A distributed platform for orchestrating asynchronous tasks,
+                  dependency-aware CI pipelines, GitHub-triggered workflows,
+                  worker monitoring, retries, and automated failure analysis.
+                </p>
+
+                <div className="mt-10 flex flex-wrap gap-3">
+                  {[
+                    "Python",
+                    "FastAPI",
+                    "Docker",
+                    "Redis",
+                    "Celery",
+                    "PostgreSQL",
+                    "CI/CD",
+                    "Distributed Systems",
+                  ].map((tech) => (
+                    <span
+                      key={tech}
+                      className="rounded-lg border border-white/10 bg-black/20 px-4 py-2 text-sm text-zinc-300"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="mt-10">
+                  <a
+                    href="/aegis-x"
+                    className="inline-flex rounded-xl bg-white px-6 py-4 font-medium text-black transition hover:scale-[1.02]"
+                  >
+                    Explore Aegis X Architecture →
+                  </a>
+                </div>
+              </div>
+
+              {/* ARCHITECTURE */}
+              <div className="rounded-[1.5rem] border border-white/10 bg-[#0d0d10] p-7">
+                <div className="flex items-start justify-between">
+                  <div>
+                    <h4 className="font-semibold">System Overview</h4>
+                    <p className="mt-1 text-sm text-zinc-500">
+                      Distributed execution architecture
+                    </p>
+                  </div>
+
+                  <span className="flex items-center gap-2 text-xs font-medium tracking-[0.15em] text-emerald-400">
+                    <span className="h-2 w-2 rounded-full bg-emerald-400" />
+                    ACTIVE
+                  </span>
+                </div>
+
+                <div className="mt-10 space-y-5">
+                  {[
+                    ["GitHub", "Push Event"],
+                    ["Webhook API", "FastAPI"],
+                    ["Pipeline Engine", "Dependency-Aware Orchestration"],
+                    ["Task Queue", "Redis + Celery"],
+                    ["Workers", "Distributed Execution"],
+                  ].map(([title, subtitle], index) => (
+                    <div key={title}>
+                      <div
+                        className={`rounded-xl border p-5 ${
+                          index === 1 || index === 2
+                            ? "border-blue-400/30 bg-blue-400/5"
+                            : "border-white/10 bg-white/[0.02]"
+                        }`}
+                      >
+                        <p
+                          className={`font-medium ${
+                            index === 1 || index === 2
+                              ? "text-blue-300"
+                              : "text-white"
+                          }`}
+                        >
+                          {title}
+                        </p>
+
+                        <p className="mt-2 text-sm text-zinc-500">
+                          {subtitle}
+                        </p>
+                      </div>
+
+                      {index < 4 && (
+                        <div className="py-3 text-center text-blue-400">
+                          ↓
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SKILLS */}
+      <section id="skills" className="border-b border-white/10">
+        <div className="mx-auto grid max-w-7xl gap-16 px-6 py-28 lg:grid-cols-[0.8fr_1.2fr]">
+          <div>
+            <p className="text-sm font-medium tracking-[0.35em] text-blue-400">
+              TECHNICAL FOCUS
+            </p>
+
+            <h2 className="mt-6 text-5xl font-bold tracking-tight">
+              Building across
+              <span className="block text-zinc-500">
+                the modern stack.
+              </span>
+            </h2>
+
+            <p className="mt-10 max-w-md text-lg leading-9 text-zinc-400">
+              My technical interests are centered around infrastructure,
+              automation, distributed systems, and building reliable
+              platforms.
+            </p>
+          </div>
+
+          <div className="space-y-5">
+            <SkillCard
+              number="01"
+              title="Cloud & Infrastructure"
+              description="Building and understanding cloud environments."
+              skills={["AWS", "Linux", "Networking", "Cloud Infrastructure"]}
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+            <SkillCard
+              number="02"
+              title="DevOps & Automation"
+              description="Automating the software delivery lifecycle."
+              skills={["Docker", "CI/CD", "GitHub Actions", "Git", "Automation"]}
+            />
+
+            <SkillCard
+              number="03"
+              title="Backend Engineering"
+              description="APIs, services, and system-level application design."
+              skills={["Python", "FastAPI", "REST APIs", "SQL", "PostgreSQL"]}
+            />
+
+            <SkillCard
+              number="04"
+              title="Distributed Systems"
+              description="Designing systems that coordinate asynchronous workloads."
+              skills={["Redis", "Celery", "Task Queues", "Workers"]}
+            />
+          </div>
         </div>
-      </main>
+      </section>
+
+      {/* CONTACT */}
+      <section id="contact">
+        <div className="mx-auto max-w-7xl px-6 py-28">
+          <div className="rounded-[2rem] border border-white/10 bg-gradient-to-br from-zinc-900 to-[#09090b] p-8 lg:p-14">
+            <p className="text-sm font-medium tracking-[0.35em] text-blue-400">
+              CONTACT
+            </p>
+
+            <div className="mt-8 grid gap-12 lg:grid-cols-[1fr_0.9fr]">
+              <div>
+                <h2 className="text-5xl font-bold tracking-tight">
+                  Let&apos;s build
+                  <span className="block text-zinc-500">
+                    something meaningful.
+                  </span>
+                </h2>
+
+                <p className="mt-8 max-w-xl text-lg leading-9 text-zinc-400">
+                  Open to opportunities, engineering conversations, projects,
+                  and collaborations in Cloud, DevOps, Backend, and Platform
+                  Engineering.
+                </p>
+              </div>
+
+              <div className="space-y-4">
+                <a
+                  href={`https://wa.me/${whatsappNumber}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block rounded-xl border border-white/10 p-6 transition hover:border-emerald-400/50 hover:bg-emerald-400/5"
+                >
+                  <p className="text-sm text-zinc-500">WhatsApp</p>
+                  <p className="mt-2 text-lg font-medium">
+                    +91 93606 67064
+                  </p>
+                </a>
+
+                <a
+                  href={`mailto:${email}`}
+                  className="block rounded-xl border border-white/10 p-6 transition hover:border-blue-400/50 hover:bg-blue-400/5"
+                >
+                  <p className="text-sm text-zinc-500">Email</p>
+                  <p className="mt-2 break-all text-lg font-medium">
+                    {email}
+                  </p>
+                </a>
+
+                <a
+                  href={linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block rounded-xl border border-white/10 p-6 transition hover:border-blue-400/50 hover:bg-blue-400/5"
+                >
+                  <p className="text-sm text-zinc-500">LinkedIn</p>
+                  <p className="mt-2 text-lg font-medium">
+                    V. A. Aldrin Joshua ↗
+                  </p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="border-t border-white/10">
+        <div className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-8 text-sm text-zinc-500 sm:flex-row sm:items-center sm:justify-between">
+          <p>© {new Date().getFullYear()} Aldrin Joshua.</p>
+
+          <p>Cloud · DevOps · Platform Engineering</p>
+        </div>
+      </footer>
+    </main>
+  );
+}
+
+function SkillCard({
+  number,
+  title,
+  description,
+  skills,
+}: {
+  number: string;
+  title: string;
+  description: string;
+  skills: string[];
+}) {
+  return (
+    <div className="grid gap-6 rounded-[1.5rem] border border-white/10 bg-white/[0.02] p-7 transition hover:border-blue-400/30 hover:bg-blue-400/[0.03] md:grid-cols-[auto_1fr_auto] md:items-center">
+      <div className="flex h-13 w-13 items-center justify-center rounded-xl border border-blue-400/25 bg-blue-400/10 font-semibold text-blue-300">
+        {number}
+      </div>
+
+      <div>
+        <h3 className="text-xl font-semibold">{title}</h3>
+
+        <p className="mt-2 max-w-md leading-6 text-zinc-500">
+          {description}
+        </p>
+      </div>
+
+      <div className="flex max-w-md flex-wrap gap-2">
+        {skills.map((skill) => (
+          <span
+            key={skill}
+            className="rounded-lg border border-white/10 px-4 py-2 text-sm text-zinc-400"
+          >
+            {skill}
+          </span>
+        ))}
+      </div>
     </div>
   );
 }
