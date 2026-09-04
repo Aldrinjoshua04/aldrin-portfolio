@@ -9,6 +9,10 @@ export default function Home() {
     "https://www.linkedin.com/in/v-a-aldrin-joshua-73216a412";
   const github = "https://github.com/Aldrinjoshua04";
 
+  const gmailCompose = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
+    email
+  )}`;
+
   return (
     <main className="min-h-screen bg-[#09090b] text-white selection:bg-blue-500/30">
       {/* NAVBAR */}
@@ -78,9 +82,9 @@ export default function Home() {
 
             <p className="mt-10 max-w-2xl text-lg leading-9 text-zinc-400 sm:text-xl">
               I&apos;m Aldrin Joshua, an aspiring Cloud & DevOps Engineer
-              focused on cloud infrastructure, automation, containerized
-              systems, distributed platforms, and building reliable
-              production-oriented software.
+              focused on Linux, cloud infrastructure, Vagrant-based
+              environments, automation, containerized systems, distributed
+              platforms, and building reliable production-oriented software.
             </p>
 
             <div className="mt-12 flex flex-wrap gap-5">
@@ -159,14 +163,16 @@ export default function Home() {
             </p>
 
             <p className="mt-6 text-lg leading-8 text-zinc-500">
-              I&apos;m building hands-on experience across cloud platforms,
-              DevOps workflows, backend systems, distributed architectures,
-              automation, CI/CD, containers, and platform engineering.
+              I&apos;m building hands-on experience across Linux environments,
+              cloud platforms, DevOps workflows, Vagrant-based infrastructure,
+              backend systems, distributed architectures, automation, CI/CD,
+              containers, and platform engineering.
             </p>
 
             <div className="mt-10 border-l border-blue-400 pl-6 text-zinc-400">
-              Continuously expanding through hands-on projects, cloud
-              engineering, automation, and production-oriented system design.
+              Continuously expanding through hands-on infrastructure projects,
+              Linux administration, automation, cloud engineering, and
+              production-oriented system design.
             </div>
           </div>
         </div>
@@ -300,6 +306,187 @@ export default function Home() {
               </div>
             </div>
           </div>
+
+          {/* V PROFILE */}
+          <div className="mt-8 overflow-hidden rounded-[2rem] border border-emerald-400/20 bg-gradient-to-br from-emerald-500/[0.07] via-zinc-900 to-zinc-950">
+            <div className="grid gap-12 p-8 lg:grid-cols-[1fr_0.9fr] lg:p-14">
+              <div>
+                <div className="inline-flex rounded-full border border-emerald-400/30 bg-emerald-400/10 px-4 py-2 text-xs font-medium tracking-[0.2em] text-emerald-300">
+                  INFRASTRUCTURE & DEVOPS PROJECT
+                </div>
+
+                <p className="mt-8 text-sm tracking-[0.3em] text-emerald-400">
+                  LINUX · VAGRANT · VIRTUALIZATION · AUTOMATION
+                </p>
+
+                <h3 className="mt-6 text-5xl font-bold tracking-tight">
+                  V Profile
+                </h3>
+
+                <p className="mt-5 text-2xl text-zinc-400">
+                  Multi-VM Infrastructure & DevOps Environment
+                </p>
+
+                <p className="mt-8 max-w-xl text-lg leading-9 text-zinc-400">
+                  A hands-on infrastructure environment where I worked deeply
+                  with Linux systems, Vagrant, VirtualBox, networking, service
+                  configuration, application deployment, and repeatable
+                  provisioning across multiple virtual machines.
+                </p>
+
+                <p className="mt-6 max-w-xl text-lg leading-9 text-zinc-500">
+                  The project strengthened my practical understanding of how
+                  web, application, database, cache, and messaging services
+                  communicate inside a distributed environment.
+                </p>
+
+                <div className="mt-10 flex flex-wrap gap-3">
+                  {[
+                    "Linux",
+                    "Vagrant",
+                    "VirtualBox",
+                    "CentOS Stream 9",
+                    "Ubuntu",
+                    "Nginx",
+                    "Tomcat",
+                    "MariaDB",
+                    "Memcached",
+                    "RabbitMQ",
+                    "Ansible",
+                    "Jenkins",
+                    "Maven",
+                    "SonarQube",
+                    "Nexus",
+                  ].map((tech) => (
+                    <span
+                      key={tech}
+                      className="rounded-lg border border-white/10 bg-black/20 px-4 py-2 text-sm text-zinc-300"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="mt-10 rounded-2xl border border-white/10 bg-black/20 p-6">
+                  <p className="text-xs font-medium tracking-[0.2em] text-emerald-400">
+                    WHAT I PRACTICED
+                  </p>
+
+                  <div className="mt-5 grid gap-4 sm:grid-cols-2">
+                    {[
+                      "Linux service administration",
+                      "Virtual machine provisioning",
+                      "Vagrant environment management",
+                      "Private-network communication",
+                      "Nginx reverse proxy configuration",
+                      "Tomcat application hosting",
+                      "Infrastructure troubleshooting",
+                      "Manual → automated provisioning",
+                    ].map((item) => (
+                      <div
+                        key={item}
+                        className="flex items-start gap-3 text-sm text-zinc-400"
+                      >
+                        <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400" />
+                        {item}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* V PROFILE ARCHITECTURE */}
+              <div className="rounded-[1.5rem] border border-white/10 bg-[#0d0d10] p-7">
+                <div className="flex items-start justify-between">
+                  <div>
+                    <h4 className="font-semibold">Infrastructure Overview</h4>
+                    <p className="mt-1 text-sm text-zinc-500">
+                      Multi-VM Linux environment
+                    </p>
+                  </div>
+
+                  <span className="flex items-center gap-2 text-xs font-medium tracking-[0.15em] text-emerald-400">
+                    <span className="h-2 w-2 rounded-full bg-emerald-400" />
+                    LAB
+                  </span>
+                </div>
+
+                <div className="mt-10 space-y-4">
+                  {[
+                    ["web01", "Nginx / Reverse Proxy", "192.168.56.11"],
+                    ["app01", "Tomcat Application", "192.168.56.12"],
+                    ["mc01", "Memcached", "192.168.56.14"],
+                    ["db01", "MariaDB", "192.168.56.15"],
+                    ["rmq01", "RabbitMQ", "192.168.56.16"],
+                  ].map(([name, role, ip]) => (
+                    <div
+                      key={name}
+                      className="rounded-xl border border-white/10 bg-white/[0.02] p-5"
+                    >
+                      <div className="flex items-center justify-between gap-3">
+                        <p className="font-semibold text-white">{name}</p>
+
+                        <span className="font-mono text-xs text-zinc-600">
+                          {ip}
+                        </span>
+                      </div>
+
+                      <p className="mt-2 text-sm text-zinc-500">{role}</p>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="mt-7 border-t border-white/10 pt-6">
+                  <p className="text-xs tracking-[0.2em] text-zinc-600">
+                    INFRASTRUCTURE FLOW
+                  </p>
+
+                  <p className="mt-3 text-sm leading-7 text-zinc-400">
+                    Client → Nginx → Tomcat → supporting services
+                  </p>
+
+                  <p className="mt-4 text-sm leading-7 text-zinc-500">
+                    Worked through both manual provisioning and automated
+                    provisioning approaches, building practical understanding
+                    of repeatability and infrastructure-as-code workflows.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* DISTRIBUTED TASK SCHEDULER */}
+          <div className="mt-8 rounded-[2rem] border border-white/10 bg-white/[0.02] p-8 lg:p-14">
+            <p className="text-sm tracking-[0.3em] text-zinc-500">
+              DISTRIBUTED SYSTEMS · AUTOMATION
+            </p>
+
+            <h3 className="mt-6 text-4xl font-bold tracking-tight">
+              Distributed Task Scheduler
+            </h3>
+
+            <p className="mt-6 max-w-3xl text-lg leading-9 text-zinc-400">
+              A practical exploration of task scheduling, worker coordination,
+              asynchronous execution, and distributed-system patterns.
+            </p>
+
+            <div className="mt-8 flex flex-wrap gap-3">
+              {[
+                "Python",
+                "Task Scheduling",
+                "Workers",
+                "Automation",
+                "Distributed Systems",
+              ].map((tech) => (
+                <span
+                  key={tech}
+                  className="rounded-lg border border-white/10 bg-black/20 px-4 py-2 text-sm text-zinc-300"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
@@ -319,39 +506,79 @@ export default function Home() {
             </h2>
 
             <p className="mt-10 max-w-md text-lg leading-9 text-zinc-400">
-              My technical interests are centered around infrastructure,
-              automation, distributed systems, and building reliable
-              platforms.
+              My technical interests are centered around Linux infrastructure,
+              cloud engineering, automation, distributed systems, and building
+              reliable platforms.
             </p>
           </div>
 
           <div className="space-y-5">
             <SkillCard
               number="01"
-              title="Cloud & Infrastructure"
-              description="Building and understanding cloud environments."
-              skills={["AWS", "Linux", "Networking", "Cloud Infrastructure"]}
+              title="Linux & Infrastructure"
+              description="Hands-on experience working with Linux environments, services, networking, virtualization, and infrastructure configuration."
+              skills={[
+                "Linux",
+                "CentOS",
+                "Ubuntu",
+                "Networking",
+                "System Administration",
+              ]}
             />
 
             <SkillCard
               number="02"
-              title="DevOps & Automation"
-              description="Automating the software delivery lifecycle."
-              skills={["Docker", "CI/CD", "GitHub Actions", "Git", "Automation"]}
+              title="Cloud & Virtualization"
+              description="Building and understanding infrastructure environments through cloud concepts and repeatable virtualized systems."
+              skills={[
+                "AWS",
+                "Vagrant",
+                "VirtualBox",
+                "Cloud Infrastructure",
+                "Virtual Machines",
+              ]}
             />
 
             <SkillCard
               number="03"
-              title="Backend Engineering"
-              description="APIs, services, and system-level application design."
-              skills={["Python", "FastAPI", "REST APIs", "SQL", "PostgreSQL"]}
+              title="DevOps & Automation"
+              description="Automating infrastructure and software delivery workflows with repeatable provisioning and CI/CD practices."
+              skills={[
+                "Docker",
+                "Ansible",
+                "Jenkins",
+                "CI/CD",
+                "GitHub Actions",
+                "Git",
+                "Automation",
+              ]}
             />
 
             <SkillCard
               number="04"
+              title="Backend Engineering"
+              description="APIs, services, asynchronous workloads, and system-level application design."
+              skills={[
+                "Python",
+                "FastAPI",
+                "REST APIs",
+                "SQL",
+                "PostgreSQL",
+              ]}
+            />
+
+            <SkillCard
+              number="05"
               title="Distributed Systems"
-              description="Designing systems that coordinate asynchronous workloads."
-              skills={["Redis", "Celery", "Task Queues", "Workers"]}
+              description="Designing and understanding systems that coordinate asynchronous workloads across multiple services and workers."
+              skills={[
+                "Redis",
+                "Celery",
+                "RabbitMQ",
+                "Task Queues",
+                "Workers",
+                "Orchestration",
+              ]}
             />
           </div>
         </div>
@@ -389,18 +616,24 @@ export default function Home() {
                   className="block rounded-xl border border-white/10 p-6 transition hover:border-emerald-400/50 hover:bg-emerald-400/5"
                 >
                   <p className="text-sm text-zinc-500">WhatsApp</p>
+
                   <p className="mt-2 text-lg font-medium">
-                    +91 93606 67064
+                    +91 93606 67064 ↗
                   </p>
                 </a>
 
                 <a
-                  href={`mailto:${email}`}
+                  href={gmailCompose}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block rounded-xl border border-white/10 p-6 transition hover:border-blue-400/50 hover:bg-blue-400/5"
                 >
-                  <p className="text-sm text-zinc-500">Email</p>
+                  <p className="text-sm text-zinc-500">
+                    Email
+                  </p>
+
                   <p className="mt-2 break-all text-lg font-medium">
-                    {email}
+                    {email} ↗
                   </p>
                 </a>
 
@@ -411,6 +644,7 @@ export default function Home() {
                   className="block rounded-xl border border-white/10 p-6 transition hover:border-blue-400/50 hover:bg-blue-400/5"
                 >
                   <p className="text-sm text-zinc-500">LinkedIn</p>
+
                   <p className="mt-2 text-lg font-medium">
                     V. A. Aldrin Joshua ↗
                   </p>
